@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SpellBook : MonoBehaviour
 {
-    private bool opened;
+private bool opened;
     public GameObject spellBook;
     void Awake()
     {
