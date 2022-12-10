@@ -388,6 +388,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 566406594}
     m_Modifications:
+    - target: {fileID: 8989337962631090622, guid: 0d44d35036c97e648bab02d3369a17f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8989337962631090623, guid: 0d44d35036c97e648bab02d3369a17f7, type: 3}
+      propertyPath: m_Name
+      value: Square1
+      objectReference: {fileID: 0}
     - target: {fileID: 8989337962749136416, guid: 0d44d35036c97e648bab02d3369a17f7, type: 3}
       propertyPath: m_Name
       value: Mana Bar
