@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class SpellBook : MonoBehaviour
 {
     private bool opened;
     public GameObject spellBook;
