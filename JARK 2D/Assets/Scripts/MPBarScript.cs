@@ -6,6 +6,12 @@ public class MPBarScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public int mp_counter;
+    public GameObject square1;
+    public GameObject square2;
+    public GameObject square3;
+    public GameObject square4;
+    public GameObject square5;
+
     void Start()
     {
         mp_counter = 5;
@@ -13,5 +19,20 @@ public class MPBarScript : MonoBehaviour
 
     public void CastSpell(){
         mp_counter--;
+        if (mp_counter == 4){
+            square5.active = false;
+        }
+        else if (mp_counter == 3){
+            square4.active = false;
+        }
+        else if (mp_counter == 2){
+            square3.active = false;
+        }
+        else if (mp_counter == 1){
+            square2.active = false;
+        }
+        else {
+            square1.active =false;
+        }
     }
 }
