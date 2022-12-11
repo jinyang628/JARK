@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     [SerializeField] private float speed = 8f;
-    [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 5f;
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D player;
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpingPower);
+            Debug.Log("trying to jump");
         }
 
         if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)
