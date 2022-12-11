@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3883168817786506202}
   m_Layer: 0
-  m_Name: Ground Checker
+  m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221123769086418803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.611, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6102839235693794486}
   - component: {fileID: 1493690182795542223}
   - component: {fileID: -1593178411509898218}
-  - component: {fileID: 5071696012534790301}
+  - component: {fileID: -7915854455237550844}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -156,7 +156,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0032730699, y: 0}
   m_Size: {x: 0.9279907, y: 1.1111112}
   m_Direction: 0
---- !u!114 &5071696012534790301
+--- !u!114 &-7915854455237550844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,8 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a471a25fe3d59c84381c646e93b6a6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
+  jumpingPower: 5
   player: {fileID: 1493690182795542223}
   groundCheck: {fileID: 3883168817786506202}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
