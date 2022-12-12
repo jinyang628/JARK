@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SpellFilter : MonoBehaviour
 {
-public bool[] validSpells = new bool[4];
-    private Spell[] allSpells = {
-                                new Spell("jalvination", "testy1"),
-                                new Spell("prejinyangite", "testy2"),
-                                new Spell("valkyrielin", "testy3"),
-                                new Spell("preroydenization", "testy4")
-                                };
+    public bool[] validSpells = new bool[4];
+    public Spell[] allSpells;
     private Spell[] activeSpells = new Spell[4];
+
+    public Spell[] GetActiveSpells() {
+        return activeSpells;
+    }
     // Awake is called at first launch
     void Awake()
     {
@@ -23,7 +22,41 @@ public bool[] validSpells = new bool[4];
             }
         }
     }
-    public Spell[] GetActiveSpells(){
-        return activeSpells;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            // if mp and affinity is sufficient
+            if (true) {
+                // activate
+                activeSpells[0].Activate(gameObject);
+            } else {
+                // alert not enough mp/stability
+            }
+        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            // if mp and affinity is sufficient
+            if (true) {
+                // activate
+                activeSpells[2].Activate(gameObject);
+            } else {
+                // alert not enough mp/stability
+            }
+        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            // if mp and affinity is sufficient
+            if (true) {
+                // activate
+                activeSpells[2].Activate(gameObject);
+            } else {
+                // alert not enough mp/stability
+            }
+        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            // if mp and affinity is sufficient
+            if (true) {
+                // activate
+                activeSpells[3].Activate(gameObject);
+            } else {
+                // alert not enough mp/stability
+            }
+        }
     }
 }
