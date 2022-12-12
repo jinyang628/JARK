@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#jinyang is here;
-// kyriel
+
 public class Spells : MonoBehaviour
 {
-    //alvin comment
-    //ROYDENS COMMENT
     public bool[] validSpells = new bool[40];
     private Spell[] allSpells = {
                                 new Spell("jalvination", "testy1"),
