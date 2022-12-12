@@ -15,7 +15,7 @@ public class SpellControls : MonoBehaviour
             // if mp and affinity is sufficient
             if (true) {
                 // activate
-                ability.Activate(gameObject);
+                spell.Activate(gameObject);
             } else {
                 // alert not enough mp/stability
             }

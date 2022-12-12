@@ -8,5 +8,10 @@ public class Spell : ScriptableObject {
 
     public int MpCost {get; set;}
     public (float, float) affinityCost {get; set;} // x, y values of offset
+    
+    public Spell(string name, string desc) {
+        Name = name;
+        Desc = desc;
+    }
     public virtual void Activate(GameObject parent) {}
 }

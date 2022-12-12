@@ -17,7 +17,7 @@ public class SpellBook : MonoBehaviour
         opened = false;
         leftPage.text = "";
         for (int x = 0; x < spellList.Length; x++) {
-            leftPage.text = leftPage.text + spellList[x].GetName() + "\n" + spellList[x].GetDesc() + "\n";
+            leftPage.text = leftPage.text + spellList[x].Name + "\n" + spellList[x].Desc + "\n";
         }
         Close();
     }
