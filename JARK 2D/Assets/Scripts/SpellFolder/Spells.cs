@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#jinyang is here;
+//jinyang is here;
 
 public class Spells : MonoBehaviour
 {
