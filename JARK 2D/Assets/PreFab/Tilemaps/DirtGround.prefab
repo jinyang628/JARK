@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 1410178890575742954}
   - component: {fileID: 6889571842598564021}
   m_Layer: 0
-  m_Name: Test Palette
+  m_Name: DirtGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
