@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    private Animator playerAnimator;
 
     void Update()
     {
