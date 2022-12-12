@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
+    //alvin comment
     public bool[] validSpells = new bool[40];
     private Spell[] allSpells = {
                                 new Spell("jalvination", "testy1"),
