@@ -13,7 +13,7 @@ public class SpellBook : MonoBehaviour
     private Spell[] spellList;
     void Awake()
     {
-        spellList = spells.GetComponent<Spells>().GetActiveSpells();
+        spellList = spells.GetComponent<SpellFilter>().GetActiveSpells();
         opened = false;
         leftPage.text = "";
         for (int x = 0; x < spellList.Length; x++) {
