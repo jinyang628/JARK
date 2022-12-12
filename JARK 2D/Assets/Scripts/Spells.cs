@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// kyriel
 public class Spells : MonoBehaviour
 {
     public bool[] validSpells = new bool[40];
