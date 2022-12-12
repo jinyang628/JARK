@@ -27,6 +27,7 @@
 /JARK 2D/[Uu]nityGenerated/
 # file on crash reports
 /JARK 2D/sysinfo.txt
+sysinfo.txt
 # Unity3D generated meta files
 *.meta
 *.pidb.meta
