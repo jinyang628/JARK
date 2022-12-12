@@ -25,11 +25,11 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if (horizontal == 0)
         {
-            playerAnimator.SetBool("isWalking", False);
+            playerAnimator.SetBool("isWalking", false);
         }
         else
         {
-            playerAnimator.SetBool("isWalking", True);
+            playerAnimator.SetBool("isWalking", true);
         }
 
 
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
         }
 
-        playerAnimator.SetBool("isJumping", !IsGrounded())
+        playerAnimator.SetBool("isJumping", !IsGrounded());
         Flip();
     }
 
