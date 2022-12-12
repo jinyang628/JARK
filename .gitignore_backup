@@ -15,18 +15,7 @@
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
-/JARK 2D/[Aa]ssets/AssetStoreTools*
-/JARK 2D/[Bb]uild/
-/JARK 2D/[Ll]ibrary/
-/JARK 2D/[Ll]ocal[Cc]ache/
-/JARK 2D/[Ll]ogs/
-/JARK 2D/[Uu]ser[Ss]ettings/
-/JARK 2D/[Pp]roject[Ss]ettings/
-/JARK 2D/[Oo]bj/
-/JARK 2D/[Tt]emp/
-/JARK 2D/[Uu]nityGenerated/
 # file on crash reports
-/JARK 2D/sysinfo.txt
 sysinfo.txt
 # Unity3D generated meta files
 *.meta
