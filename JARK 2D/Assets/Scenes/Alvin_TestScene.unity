@@ -1163,9 +1163,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 159291991}
     m_Modifications:
+    - target: {fileID: 2138779355591619642, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5537263740248033277, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_Name
       value: Affinity_Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657725703023169034, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657725703023169034, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_RootOrder
@@ -1185,11 +1197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 376
+      value: 323.7
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 126
+      value: 104.7
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1227,7 +1239,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1256306662867387144, guid: cc11123f50922754e90363460f1ccf58, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc11123f50922754e90363460f1ccf58, type: 3}
 --- !u!1 &1667338877 stripped
 GameObject:
