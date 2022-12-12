@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spell
-{
-    private string name;
-    private string desc;
-    public string GetName() {
-        return this.name;
-    }
-    public string GetDesc() {
-        return this.desc;
-    }
-    public Spell(string name, string desc) {
-        this.name = name;
-        this.desc = desc;
-    }
+public class Spell : ScriptableObject {
+    public string Name {get; set;}
+    public string Desc {get; set;}
+
+    public int MpCost {get; set;}
+    public (float, float) affinityCost {get; set;} // x, y values of offset
+    public virtual void Activate(GameObject parent) {}
 }

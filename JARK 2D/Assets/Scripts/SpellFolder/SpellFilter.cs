@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spells : MonoBehaviour
+public class SpellFilter : MonoBehaviour
 {
-    //alvin comment
-    public bool[] validSpells = new bool[4];
+public bool[] validSpells = new bool[4];
     private Spell[] allSpells = {
                                 new Spell("jalvination", "testy1"),
                                 new Spell("prejinyangite", "testy2"),
