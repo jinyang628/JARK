@@ -1005,6 +1005,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982349926}
   m_CullTransparentMesh: 1
+--- !u!1 &1052911932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4139997578918065921, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+  m_PrefabInstance: {fileID: 1479927273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1052911936
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052911932}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &1319873507 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4070168540911643513, guid: cc11123f50922754e90363460f1ccf58, type: 3}
@@ -1166,6 +1192,14 @@ PrefabInstance:
     - target: {fileID: 5537263740248033277, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_Name
       value: Affinity_Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657725703023169034, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657725703023169034, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_RootOrder
