@@ -29,8 +29,15 @@
 /JARK 2D/sysinfo.txt
 sysinfo.txt
 # Unity3D generated meta files
-*.meta
+*.pdb.meta
+*.mdb.meta
 *.pidb.meta
+
+# Visual Studio cache directory
+.vs/
+
+# Gradle cache directory
+.gradle/
 
 ###
 # VS/MD solution and project files
