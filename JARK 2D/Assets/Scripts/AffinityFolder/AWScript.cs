@@ -10,11 +10,12 @@ public class AWScript : MonoBehaviour
     public int CurrentQuadrant;
     public bool IsStable;
     public bool WithinWheel;
+    public float radius;
  
     // Resets heart to centre of wheel
     public void ResetHeart()
     {
-        Heart.transform.position = new Vector2(Background.transform.position.x, Background.transform.position.y);
+        Heart.transform.position = Background.transform.position;
     }
 
     // Stability changes are currently hard-coded...
@@ -35,14 +36,12 @@ public class AWScript : MonoBehaviour
             
     }
    
-    // public bool IsStable => Heart.GetComponent<Collider2D>().bounds.Intersects(StabilityZone.GetComponent<Collider2D>().bounds);
-    // public bool WithinWheel => Heart.GetComponent<Collider2D>().bounds.Intersects(Background.GetComponent<Collider2D>().bounds);
-
     public void PointerUpdate()
     {
         float x = Heart.transform.position.x - Background.transform.position.x;
         float y = Heart.transform.position.y - Background.transform.position.y;
-        float displacement = new Vector2(x, y).sqrMagnitude;
+        float displacement = (Heart.transform.position - Background.transform.position).sqrMagnitude;
+
 
         if (x < 0 && y >= 0)
         {
@@ -61,6 +60,10 @@ public class AWScript : MonoBehaviour
             CurrentQuadrant = 4;
         }
 
+        IsStable = Heart.GetComponent<Collider2D>().bounds.Intersects(StabilityZone.GetComponent<Collider2D>().bounds);
+        //WithinWheel = Heart.GetComponent<Collider2D>().bounds.Intersects(Background.GetComponent<Collider2D>().bounds);
+
+        /*
         if (displacement <= StabilityZone.GetComponent<CircleCollider2D>().radius)
         {
             IsStable = true;
@@ -68,13 +71,31 @@ public class AWScript : MonoBehaviour
         {
             IsStable = false;
         }
+        */
 
-        if (displacement <= Background.GetComponent<CircleCollider2D>().radius)
+        if (displacement <= radius)
         {
             WithinWheel = true;
         } else
         {
             WithinWheel = false;
+        }
+        
+    }
+       
+    public void MovePointer()
+    {
+
+        Vector3 currPosition = Heart.transform.position;
+        Vector3 newPosition = currPosition + new Vector3(0.5f, 0.5f, 0);
+        if ((newPosition - Background.transform.position).sqrMagnitude <= radius)
+        {
+            Heart.transform.position = newPosition;
+        } else
+        {
+            Vector3 correction = (newPosition - Background.transform.position).normalized;
+            Heart.transform.position = Background.transform.position + correction * radius / 5 * 2;
+
         }
     }
 
