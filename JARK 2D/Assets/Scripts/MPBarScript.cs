@@ -20,19 +20,19 @@ public class MPBarScript : MonoBehaviour
     public void CastSpell(){
         mp_counter--;
         if (mp_counter == 4){
-            square5.active = false;
+            square5.SetActive(false);
         }
         else if (mp_counter == 3){
-            square4.active = false;
+            square4.SetActive(false);
         }
         else if (mp_counter == 2){
-            square3.active = false;
+            square3.SetActive(false);
         }
         else if (mp_counter == 1){
-            square2.active = false;
+            square2.SetActive(false);
         }
         else {
-            square1.active =false;
+            square1.SetActive(false);
         }
     }
 }

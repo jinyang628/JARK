@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 60423255}
   - component: {fileID: 60423254}
   - component: {fileID: 60423253}
+  - component: {fileID: 60423256}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -209,7 +210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1319873507}
         m_TargetAssemblyTypeName: AWScript, Assembly-CSharp
-        m_MethodName: Reset_Heart
+        m_MethodName: ResetHeart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -257,6 +258,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60423251}
   m_CullTransparentMesh: 1
+--- !u!1818360608 &60423256
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60423251}
+  m_Enabled: 1
+  m_Weight: 1
+  m_TranslationAtRest: {x: -356.99997, y: -174, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &159291987
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +343,8 @@ Canvas:
   m_GameObject: {fileID: 159291987}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 659506016}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -447,7 +465,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1319873507}
         m_TargetAssemblyTypeName: AWScript, Assembly-CSharp
-        m_MethodName: Increase_Stability
+        m_MethodName: IncreaseStability
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -581,7 +599,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1319873507}
         m_TargetAssemblyTypeName: AWScript, Assembly-CSharp
-        m_MethodName: Decrease_Stability
+        m_MethodName: DecreaseStability
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1155,23 +1173,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -427.10995
+      value: 376
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -192.5
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 7805975667748615981, guid: cc11123f50922754e90363460f1ccf58, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1211,6 +1229,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+--- !u!1 &1667338877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8645805659805013168, guid: cc11123f50922754e90363460f1ccf58, type: 3}
+  m_PrefabInstance: {fileID: 1479927273}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1667338880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667338877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1759069306
 GameObject:
   m_ObjectHideFlags: 0
