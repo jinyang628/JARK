@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpingPower);
-            Debug.Log("trying to jump");
         }
 
         if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)

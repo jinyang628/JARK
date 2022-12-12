@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
-    public bool[] validSpells = new bool[40];
+    //alvin comment
+    public bool[] validSpells = new bool[4];
     private Spell[] allSpells = {
                                 new Spell("jalvination", "testy1"),
                                 new Spell("prejinyangite", "testy2"),
                                 new Spell("valkyrielin", "testy3"),
                                 new Spell("preroydenization", "testy4")
                                 };
-    private Spell[] activeSpells = new Spell[40];
+    private Spell[] activeSpells = new Spell[4];
     // Awake is called at first launch
     void Awake()
     {

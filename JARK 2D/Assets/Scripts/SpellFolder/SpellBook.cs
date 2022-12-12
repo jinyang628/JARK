@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SpellBook : MonoBehaviour
 {
-private bool opened;
+    private bool opened;
     public GameObject spellBook;
     public Text leftPage;
     public Text rightPage;
