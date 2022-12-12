@@ -26,10 +26,14 @@ public class PlayerMovement : MonoBehaviour
         if (horizontal == 0)
         {
             playerAnimator.SetBool("isWalking", false);
+            Debug.Log("isWalking is false!");
         }
         else
         {
+            //when fully walking sth is wrong 
+            //as long as the animator is detected as still standing the guy will stay visible
             playerAnimator.SetBool("isWalking", true);
+            Debug.Log("isWalking is true!");
         }
 
 
