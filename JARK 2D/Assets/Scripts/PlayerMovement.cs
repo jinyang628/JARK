@@ -13,10 +13,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    private Animator playerAnimator;
+
+    void Start()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
 
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (horizontal == 0)
+        {
+            playerAnimator.SetBool("isWalking", false);
+        }
+        else
+        {
+            playerAnimator.SetBool("isWalking", true);
+        }
+
+
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -29,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
             player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
         }
 
+        playerAnimator.SetBool("isJumping", !IsGrounded());
         Flip();
     }
 
