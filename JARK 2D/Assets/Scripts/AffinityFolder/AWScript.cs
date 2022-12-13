@@ -18,7 +18,7 @@ public class AWScript : MonoBehaviour
         Heart.transform.position = Background.transform.position;
     }
 
-    // Stability changes are currently hard-coded...
+    // Stability changes (scuffed)
     public void IncreaseStability()
     {
         if (StabilityZone.transform.localScale.x < Background.transform.localScale.x)
@@ -40,7 +40,7 @@ public class AWScript : MonoBehaviour
     {
         float x = Heart.transform.position.x - Background.transform.position.x;
         float y = Heart.transform.position.y - Background.transform.position.y;
-        float displacement = (Heart.transform.position - Background.transform.position).sqrMagnitude;
+        float displacement = (Heart.transform.position - Background.transform.position).magnitude;
 
 
         if (x < 0 && y >= 0)
@@ -60,20 +60,17 @@ public class AWScript : MonoBehaviour
             CurrentQuadrant = 4;
         }
 
-        IsStable = Heart.GetComponent<Collider2D>().bounds.Intersects(StabilityZone.GetComponent<Collider2D>().bounds);
-        //WithinWheel = Heart.GetComponent<Collider2D>().bounds.Intersects(Background.GetComponent<Collider2D>().bounds);
-
-        /*
-        if (displacement <= StabilityZone.GetComponent<CircleCollider2D>().radius)
+        
+        if (displacement <= StabilityZone.GetComponent<Renderer>().bounds.size.x / 2)
         {
             IsStable = true;
         } else
         {
             IsStable = false;
         }
-        */
+        
 
-        if (displacement <= radius)
+        if (displacement <= Background.GetComponent<Renderer>().bounds.size.x / 2)
         {
             WithinWheel = true;
         } else
@@ -83,20 +80,31 @@ public class AWScript : MonoBehaviour
         
     }
        
-    public void MovePointer()
+    // MovePointer translates pointer according to supplied tuple
+    public void MovePointer((float, float) t1)
     {
-
         Vector3 currPosition = Heart.transform.position;
-        Vector3 newPosition = currPosition + new Vector3(0.5f, 0.5f, 0);
-        if ((newPosition - Background.transform.position).sqrMagnitude <= radius)
+        Vector3 newPosition = currPosition + new Vector3(t1.Item1 * 0.3f, t1.Item2 * 0.3f, 0);
+        if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Renderer>().bounds.size.x / 2)
         {
             Heart.transform.position = newPosition;
         } else
         {
             Vector3 correction = (newPosition - Background.transform.position).normalized;
-            Heart.transform.position = Background.transform.position + correction * radius / 5 * 2;
+            Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Renderer>().bounds.size.x / 2;
 
         }
+    }
+    
+    // Dummy spell
+    public void SPELL1()
+    {
+        MovePointer((-2, 1));
+    }
+
+    public void SPELL2()
+    {
+        MovePointer((3, -1));
     }
 
     void Start()
@@ -107,9 +115,11 @@ public class AWScript : MonoBehaviour
 
     void Update()
     {
+        // For testing, delete this and component later
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Heart.GetComponent<Rigidbody2D>().velocity = new Vector2(horizontal * 3f, vertical * 3f);
+        
         PointerUpdate();
         Debug.Log("Quadrant: " + CurrentQuadrant + ", Stability: " + IsStable + ", Within: " + WithinWheel);
         
