@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 1388379864}
   - component: {fileID: 1388379863}
   - component: {fileID: 1388379865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DirtGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

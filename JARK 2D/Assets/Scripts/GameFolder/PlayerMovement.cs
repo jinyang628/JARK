@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     [SerializeField] private float speed = 8f;
-    [SerializeField] private float jumpingPower = 5f;
+    [SerializeField] private float jumpingPower = 6f;
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D player;
@@ -39,10 +39,14 @@ public class PlayerMovement : MonoBehaviour
             player.velocity = new Vector2(player.velocity.x, jumpingPower);
         }
 
+
+        //The below is to create a difference between tapping and holding the Jump button
+        /*
         if (Input.GetButtonUp("Jump") && player.velocity.y > 0f)
         {
             player.velocity = new Vector2(player.velocity.x, player.velocity.y * 0.5f);
         }
+        */
 
         playerAnimator.SetBool("isJumping", !IsGrounded());
         Flip();

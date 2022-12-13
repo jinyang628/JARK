@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpingPower: 5
+  jumpingPower: 6
   player: {fileID: 1493690182795542223}
   groundCheck: {fileID: 3883168817786506202}
   groundLayer:
