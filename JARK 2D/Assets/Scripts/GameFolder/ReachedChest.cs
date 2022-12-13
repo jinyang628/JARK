@@ -20,11 +20,8 @@ public class ReachedChest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col){
         Debug.Log("help");
+        if (col.gameObject.name == "Player"){
+            SceneManager.LoadScene(nextSceneName);
+        }
     }
-    // void OnCollisionEnter(Collision col){
-    //     Debug.Log("here");
-    //     if (col.gameObject.name == "Player"){
-    //         SceneManager.LoadScene(nextSceneName);
-    //     }
-    // }
 }
