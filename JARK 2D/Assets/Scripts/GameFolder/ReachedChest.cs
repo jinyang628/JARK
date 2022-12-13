@@ -11,17 +11,20 @@ public class ReachedChest : MonoBehaviour
 
     void Start(){
         sceneName = SceneManager.GetActiveScene().name; 
-        nextSceneNumber = sceneName[sceneName.Length - 1] + 1;
+        nextSceneNumber = (sceneName[sceneName.Length - 1] + 1) - '0';
         nextSceneName = "Level " + nextSceneNumber.ToString();
         Debug.Log(nextSceneName);
-        
+        //ALL CORRECT
         
     }
-    //void OnCollisionEnter
-    void OnTriggerEnter(Collider col){
-        Debug.Log("here");
-        if (col.GetComponent<Collider>().name == "Player"){
-            SceneManager.LoadScene(nextSceneName);
-        }
+
+    private void OnTriggerEnter2D(Collider2D col){
+        Debug.Log("help");
     }
+    // void OnCollisionEnter(Collision col){
+    //     Debug.Log("here");
+    //     if (col.gameObject.name == "Player"){
+    //         SceneManager.LoadScene(nextSceneName);
+    //     }
+    // }
 }
