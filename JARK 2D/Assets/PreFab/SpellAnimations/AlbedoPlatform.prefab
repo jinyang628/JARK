@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 586326728922245967}
   - component: {fileID: -1801288394183315338}
   - component: {fileID: 650503231845480954}
+  - component: {fileID: 6079954278748795890}
   m_Layer: 6
   m_Name: AlbedoPlatform
   m_TagString: Untagged
@@ -115,3 +116,23 @@ PolygonCollider2D:
       - {x: 0.50740886, y: -0.23039158}
       - {x: 1, y: -0.22403428}
       - {x: 1, y: 0}
+--- !u!95 &6079954278748795890
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599912248740003289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0350cf864576f2048b0ff00b688be576, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
