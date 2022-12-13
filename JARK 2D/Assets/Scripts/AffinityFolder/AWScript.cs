@@ -9,8 +9,8 @@ public class AWScript : MonoBehaviour
     public GameObject StabilityZone;
     public int CurrentQuadrant;
     public bool IsStable;
-    public bool WithinWheel;
-    public float radius;
+    private bool WithinWheel;
+
  
     // Resets heart to centre of wheel
     public void ResetHeart()
@@ -115,11 +115,27 @@ public class AWScript : MonoBehaviour
 
     void Update()
     {
-        // For testing, delete this and component later
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Heart.GetComponent<Rigidbody2D>().velocity = new Vector2(horizontal * 3f, vertical * 3f);
-        
+        //for testing
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SPELL1();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SPELL2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ResetHeart();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            IncreaseStability();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            DecreaseStability();
+        }
         PointerUpdate();
         Debug.Log("Quadrant: " + CurrentQuadrant + ", Stability: " + IsStable + ", Within: " + WithinWheel);
         
