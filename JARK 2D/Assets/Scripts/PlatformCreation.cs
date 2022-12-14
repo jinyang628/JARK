@@ -5,15 +5,24 @@ using UnityEngine;
 public class PlatformCreation : MonoBehaviour
 {
     public GameObject platformPreFab;
-    public GameObject player;
+    private GameObject playerObj = null;
+
+    void Start()
+    {
+        if (playerObj == null)
+        {
+            playerObj = GameObject.Find("Player");
+        }
+    }
 
     void Update()
     {
-        private Vector2 platformCoords = (player.transform.position.x - 1f, player.transform.position.y);
+        float platformXCoord = playerObj.transform.position.x - 0.5f;
+        float platformYCoord = playerObj.transform.position.y - 1f;
 
         if (Input.GetKeyDown(KeyCode.F))
         {
-            GameObject instantiatedPlatform = Instantiate(platformPreFab, platformCoords);
+            GameObject instantiatedPlatform = Instantiate(platformPreFab, new Vector2(platformXCoord, platformYCoord), Quaternion.identity);
         }
     }
 }
