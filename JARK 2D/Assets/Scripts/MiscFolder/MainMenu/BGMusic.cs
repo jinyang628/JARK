@@ -6,9 +6,15 @@ public class BGMusic : MonoBehaviour
 {
     public AudioClip[] songs;
     private int currentSong = 0;
+    private static BGMusic instance = null;
 
     void Awake(){
-        DontDestroyOnLoad(this.gameObject);
+        if (instance == null){
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            return;
+        }
+        Destroy(this.gameObject);
     }
 
     void Update ()

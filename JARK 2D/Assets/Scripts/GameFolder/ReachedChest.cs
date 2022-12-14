@@ -20,6 +20,7 @@ public class ReachedChest : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.name == "Player"){
             SceneManager.LoadScene(nextSceneName);
+            PlayerPrefs.SetInt("LevelPassed", nextSceneNumber - 1);
         }
     }
 }
