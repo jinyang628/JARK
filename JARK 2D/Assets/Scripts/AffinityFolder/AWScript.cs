@@ -61,7 +61,7 @@ public class AWScript : MonoBehaviour
         }
 
         
-        if (displacement <= StabilityZone.GetComponent<Renderer>().bounds.size.x / 2)
+        if (displacement <= StabilityZone.GetComponent<Collider2D>().bounds.size.x / 2)
         {
             IsStable = true;
         } else
@@ -70,7 +70,7 @@ public class AWScript : MonoBehaviour
         }
         
 
-        if (displacement <= Background.GetComponent<Renderer>().bounds.size.x / 2)
+        if (displacement <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
         {
             WithinWheel = true;
         } else
@@ -85,13 +85,13 @@ public class AWScript : MonoBehaviour
     {
         Vector3 currPosition = Heart.transform.position;
         Vector3 newPosition = currPosition + new Vector3(t1.Item1 * 0.3f, t1.Item2 * 0.3f, 0);
-        if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Renderer>().bounds.size.x / 2)
+        if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
         {
             Heart.transform.position = newPosition;
         } else
         {
             Vector3 correction = (newPosition - Background.transform.position).normalized;
-            Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Renderer>().bounds.size.x / 2;
+            Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Collider2D>().bounds.size.x / 2;
 
         }
     }
