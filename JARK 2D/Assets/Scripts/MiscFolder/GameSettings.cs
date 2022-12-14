@@ -7,16 +7,19 @@ public class GameSettings : MonoBehaviour
 {
     public static string currentLevel;
 
+    void Start(){
+        currentLevel = SceneManager.GetActiveScene().name;
+    }
+    
     public void openSettingsMenu(){
+        Time.timeScale = 0;
         SceneManager.LoadScene("PauseMenu");
+        GameState.game_paused = true;
     }
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.Escape)){
-            SceneManager.LoadScene("PauseMenu");
+            openSettingsMenu();
         }
-        currentLevel = SceneManager.GetActiveScene().name;
-        Debug.Log(currentLevel);
     }
-
 }
