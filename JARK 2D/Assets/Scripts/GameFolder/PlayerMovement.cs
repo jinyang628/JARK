@@ -32,10 +32,12 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("isWalking", true);
         }
 
+        /*
         if (Input.GetKeyDown("f"))
         {
             playerAnimator.SetTrigger("sizeChanging");
         }
+        */
 
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
