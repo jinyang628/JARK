@@ -6,6 +6,7 @@ public class PlatformCreation : MonoBehaviour
 {
     public GameObject platformPreFab;
     private GameObject playerObj = null;
+    public AudioSource platformCastSound;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlatformCreation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F))
         {
+            platformCastSound.Play();
             GameObject instantiatedPlatform = Instantiate(platformPreFab, new Vector2(platformXCoord, platformYCoord), Quaternion.identity);
         }
     }
