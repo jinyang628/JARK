@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SpeedSpell : Spell
 {
-    public float change = 2f;
+    public float change = 1f;
     private AudioSource sound;
     private string directory = "SpeedBuffSpellSound";
     void Awake()
@@ -26,6 +26,6 @@ public class SpeedSpell : Spell
         sound.Play();
         var movement = parent.GetComponent<PlayerMovement>();
         movement.speed += change;
-        movement.jumpingPower -= change;
+        movement.jumpingPower = Mathf.Max(0, movement.jumpingPower - change);
     }
 }

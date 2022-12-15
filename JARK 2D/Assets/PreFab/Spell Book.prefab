@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2762453664741651844}
   - component: {fileID: 2762453664741651845}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spell Book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   spellBook: {fileID: 2762453664842240309}
   leftPage: {fileID: 2762453664844435157}
   rightPage: {fileID: 2762453664046494111}
-  spells: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &2762453664842240309
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 2762453664842240310}
   - component: {fileID: 2762453664842240304}
   - component: {fileID: 2762453664842240311}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: de book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
