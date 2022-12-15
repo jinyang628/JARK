@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7657725703023169034}
   - component: {fileID: 4949858980172644972}
   - component: {fileID: 7538519972757827010}
-  - component: {fileID: 2666203548899054767}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -114,14 +113,6 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5773587}
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
---- !u!222 &2666203548899054767
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4139997578918065921}
-  m_CullTransparentMesh: 1
 --- !u!1 &5537263740248033277
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8068739441117015033}
   - component: {fileID: 8416842408926884834}
-  - component: {fileID: 3800421450027316008}
   m_Layer: 0
   m_Name: Labels
   m_TagString: Untagged
@@ -266,14 +256,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!222 &3800421450027316008
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7826874987873222612}
-  m_CullTransparentMesh: 1
 --- !u!1 &8424794333536647781
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +266,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2179726196036635582}
   - component: {fileID: 8787616788595460097}
-  - component: {fileID: 7581472897007028291}
   m_Layer: 0
   m_Name: Frame
   m_TagString: Untagged
@@ -359,14 +340,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!222 &7581472897007028291
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8424794333536647781}
-  m_CullTransparentMesh: 1
 --- !u!1 &8645805659805013168
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +351,6 @@ GameObject:
   - component: {fileID: 8303293810075695815}
   - component: {fileID: 5240397538236016431}
   - component: {fileID: 8923641150634573514}
-  - component: {fileID: 1271953923759288564}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -469,14 +441,6 @@ CircleCollider2D:
   m_Offset: {x: 0.00000047683716, y: 0.00000023841858}
   serializedVersion: 2
   m_Radius: 8.48
---- !u!222 &1271953923759288564
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645805659805013168}
-  m_CullTransparentMesh: 1
 --- !u!1 &8995026410421910659
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +452,6 @@ GameObject:
   - component: {fileID: 3578642516736020719}
   - component: {fileID: 5240877380118690757}
   - component: {fileID: 2138779355591619642}
-  - component: {fileID: 6099980579616003763}
   m_Layer: 0
   m_Name: StabilityZone
   m_TagString: Untagged
@@ -579,11 +542,3 @@ CircleCollider2D:
   m_Offset: {x: 0.000009536743, y: 0.0000052452087}
   serializedVersion: 2
   m_Radius: 8.57
---- !u!222 &6099980579616003763
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8995026410421910659}
-  m_CullTransparentMesh: 1
