@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformCreation : MonoBehaviour
+public class DummyPlatformCreation : MonoBehaviour
 {
     public GameObject platformPreFab;
     private GameObject playerObj = null;
