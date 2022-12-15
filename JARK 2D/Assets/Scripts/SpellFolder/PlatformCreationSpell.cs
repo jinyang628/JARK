@@ -6,10 +6,11 @@ using UnityEngine;
 public class PlatformCreationSpell : Spell
 {
     public GameObject platformPreFab;
-    public AudioSource platformCastSound;
-
+    private AudioSource sound;
+    private string directory = "PlatformSpellSound";
     void Awake()
     {
+        sound = GameObject.Find(directory).GetComponent<AudioSource>();
         Name = "ALBEDO";
         Desc = "Creation spell. Creates a layer of dust underneath the caster.";
         MpCost = 1;
@@ -18,10 +19,13 @@ public class PlatformCreationSpell : Spell
 
     public override void Activate(GameObject parent)
     {
+        if (!sound) {
+            sound = GameObject.Find(directory).GetComponent<AudioSource>();
+        }
         Debug.Log(Name);
+        sound.Play();
         float platformXCoord = parent.transform.position.x - 0.5f;
         float platformYCoord = parent.transform.position.y - 1f;
-        // platformCastSound.Play();
         GameObject instantiatedPlatform = Instantiate(platformPreFab, new Vector2(platformXCoord, platformYCoord), Quaternion.identity);
     }
 }

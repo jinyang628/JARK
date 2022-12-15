@@ -9,15 +9,15 @@ public class SpellBook : MonoBehaviour
     public GameObject spellBook;
     public Text leftPage;
     public Text rightPage;
-    public GameObject spells;
-    private Spell[] spellList;
+    public GameObject player;
+    private (Spell[] spells, bool[] active) spellList;
     void Awake()
     {
-        spellList = spells.GetComponent<SpellFilter>().GetActiveSpells();
+        spellList = player.GetComponent<SpellFilter>().GetSpells();
         opened = false;
         leftPage.text = "";
-        for (int x = 0; x < spellList.Length; x++) {
-            leftPage.text = leftPage.text + spellList[x].Name + "\n" + spellList[x].Desc + "\n";
+        for (int x = 0; x < spellList.spells.Length; x++) {
+            leftPage.text = leftPage.text + spellList.spells[x].Name + " - " + (spellList.active[x] ? "ACTIVE" : "INACTIVE") + "\n" + spellList.spells[x].Desc + "\n";
         }
         Close();
     }
@@ -37,6 +37,7 @@ public class SpellBook : MonoBehaviour
 
     void Open()
     {
+        Time.timeScale = 0;
         spellBook.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -44,6 +45,7 @@ public class SpellBook : MonoBehaviour
 
     void Close()
     {
+        Time.timeScale = 1;
         spellBook.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
