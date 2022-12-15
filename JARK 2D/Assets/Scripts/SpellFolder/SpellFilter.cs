@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpellFilter : MonoBehaviour
 {
     public bool[] validSpells = new bool[4];
-    public Spell[] allSpells;
+    public Spell[] allSpells ;
     private Spell[] activeSpells = new Spell[4];
 
     public Spell[] GetActiveSpells() {
