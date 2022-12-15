@@ -775,10 +775,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSpells: 01010101
   allSpells:
-  - {fileID: 11400000, guid: 8c69b888691c1ed48bf34b56c34a3b2f, type: 2}
   - {fileID: 11400000, guid: 96b4c9c54cbfbdb49839379f3b8111f7, type: 2}
   - {fileID: 11400000, guid: 63967871494a9e54f88d85846de08554, type: 2}
   - {fileID: 11400000, guid: 34abdff023c20c44f927dd44d77ee7a3, type: 2}
+  - {fileID: 11400000, guid: 8c69b888691c1ed48bf34b56c34a3b2f, type: 2}
 --- !u!114 &136754370928385241
 MonoBehaviour:
   m_ObjectHideFlags: 0
