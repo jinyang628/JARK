@@ -22,12 +22,6 @@ public class DummyBuffsSpell : MonoBehaviour
     void Update()
     {
         //constantly update invisibleFollower's position to be same as Player's position
-
-        /*
-        invisibleFollowerPreFab.transform.position.x = playerObj.transform.position.x;
-        invisibleFollowerPreFab.transform.position.y = playerObj.transform.position.y;
-        */
-
         invisibleFollowerPreFab.transform.position = new Vector3(playerObj.transform.position.x, playerObj.transform.position.y, 0f);
 
         if (validSpellCast)
@@ -39,7 +33,8 @@ public class DummyBuffsSpell : MonoBehaviour
                 jumpSpellSound.Play();
                 buffSpellsAnimator.SetTrigger("castJumpSpell");
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 //for input of number 4 on alphanumeric keyboard
                 Debug.Log("Key 4:speed buff spell is cast!");
