@@ -37,12 +37,14 @@ public class DummyBuffsSpell : MonoBehaviour
                 //for input of number 3 on alphanumeric keyboard
                 Debug.Log("Key 3:jump buff spell is cast!");
                 jumpSpellSound.Play();
+                buffSpellsAnimator.SetTrigger("castJumpSpell");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 //for input of number 4 on alphanumeric keyboard
                 Debug.Log("Key 4:speed buff spell is cast!");
                 speedSpellSound.Play();
+                buffSpellsAnimator.SetTrigger("castSpeedSpell");
             }
         }
     }
