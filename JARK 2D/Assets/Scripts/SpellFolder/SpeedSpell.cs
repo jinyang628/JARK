@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SpeedSpell : Spell
 {
+    public float change = 2f;
     void Awake()
     {
         Name = "RUBEDO";
@@ -15,6 +16,9 @@ public class SpeedSpell : Spell
 
     public override void Activate(GameObject parent)
     {
-
+        Debug.Log(Name);
+        var movement = parent.GetComponent<PlayerMovement>();
+        movement.speed += change;
+        movement.jumpingPower -= change;
     }
 }

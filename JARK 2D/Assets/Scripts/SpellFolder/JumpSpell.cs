@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class JumpSpell : Spell
 {
+    public float change = 2f;
     void Awake()
     {
         Name = "CITRINITAS";
@@ -15,6 +16,9 @@ public class JumpSpell : Spell
 
     public override void Activate(GameObject parent)
     {
-
+        Debug.Log(Name);
+        var movement = parent.GetComponent<PlayerMovement>();
+        movement.jumpingPower += change;
+        movement.speed -= change;
     }
 }

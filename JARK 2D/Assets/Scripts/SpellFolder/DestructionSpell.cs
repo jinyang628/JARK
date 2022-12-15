@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class DestructionSpell : Spell
 {
-    public GameObject platformPreFab;
-    public AudioSource platformCastSound;
-
     void Awake()
     {
         Name = "NIGREDO";
@@ -18,9 +15,6 @@ public class DestructionSpell : Spell
 
     public override void Activate(GameObject parent)
     {
-        float platformXCoord = parent.transform.position.x - 0.5f;
-        float platformYCoord = parent.transform.position.y - 1f;
-        // platformCastSound.Play();
-        GameObject instantiatedPlatform = Instantiate(platformPreFab, new Vector2(platformXCoord, platformYCoord), Quaternion.identity);
+        Debug.Log(Name);
     }
 }

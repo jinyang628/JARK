@@ -18,6 +18,7 @@ public class PlatformCreationSpell : Spell
 
     public override void Activate(GameObject parent)
     {
+        Debug.Log(Name);
         float platformXCoord = parent.transform.position.x - 0.5f;
         float platformYCoord = parent.transform.position.y - 1f;
         // platformCastSound.Play();
