@@ -22,12 +22,6 @@ public class DummyBuffsSpell : MonoBehaviour
     void Update()
     {
         //constantly update invisibleFollower's position to be same as Player's position
-
-        /*
-        invisibleFollowerPreFab.transform.position.x = playerObj.transform.position.x;
-        invisibleFollowerPreFab.transform.position.y = playerObj.transform.position.y;
-        */
-
         invisibleFollowerPreFab.transform.position = new Vector3(playerObj.transform.position.x, playerObj.transform.position.y, 0f);
 
         if (validSpellCast)
