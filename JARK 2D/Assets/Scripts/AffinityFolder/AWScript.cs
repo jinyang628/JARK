@@ -115,27 +115,7 @@ public class AWScript : MonoBehaviour
 
     void Update()
     {
-        //for testing
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SPELL1();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SPELL2();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            ResetHeart();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            IncreaseStability();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            DecreaseStability();
-        }
+        
         PointerUpdate();
         Debug.Log("Quadrant: " + CurrentQuadrant + ", Stability: " + IsStable + ", Within: " + WithinWheel);
         
