@@ -5,7 +5,7 @@ using UnityEngine;
 public class MPBarScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int mp_counter;
+    private PlayerStats player;
     public GameObject square1;
     public GameObject square2;
     public GameObject square3;
@@ -14,25 +14,28 @@ public class MPBarScript : MonoBehaviour
 
     void Start()
     {
-        mp_counter = 5;
+        player = GameObject.Find("/Player").GetComponent<PlayerStats>();
     }
 
-    public void CastSpell(){
-        mp_counter--;
-        if (mp_counter == 4){
-            square5.SetActive(false);
-        }
-        else if (mp_counter == 3){
-            square4.SetActive(false);
-        }
-        else if (mp_counter == 2){
-            square3.SetActive(false);
-        }
-        else if (mp_counter == 1){
-            square2.SetActive(false);
-        }
-        else {
-            square1.SetActive(false);
+    void Update() {
+        switch (player.GetCurrMP()) {
+            case 5:
+                break;
+            case 4:
+                square5.SetActive(false);
+                break;
+            case 3:
+                square4.SetActive(false);
+                break;
+            case 2:
+                square3.SetActive(false);
+                break;
+            case 1:
+                square2.SetActive(false);
+                break;
+            case 0:
+                square1.SetActive(false);
+                break;
         }
     }
 }
