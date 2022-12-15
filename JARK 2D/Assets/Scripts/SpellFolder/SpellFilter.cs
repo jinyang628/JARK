@@ -7,13 +7,21 @@ public class SpellFilter : MonoBehaviour
     public bool[] validSpells = new bool[4];
     public Spell[] allSpells ;
     private Spell[] activeSpells = new Spell[4];
-
+    private PlayerStats playerStats;
+    KeyCode[] keyCodes = new KeyCode[]
+    {
+        KeyCode.Alpha1,
+        KeyCode.Alpha2,
+        KeyCode.Alpha3,
+        KeyCode.Alpha4,
+    };
     public Spell[] GetActiveSpells() {
         return activeSpells;
     }
     // Awake is called at first launch
     void Awake()
     {
+        playerStats = gameObject.GetComponent<PlayerStats>();
         int y = 0;
         for (int x = 0; x < allSpells.Length; x++) {
             if (validSpells[x]) {
@@ -25,37 +33,15 @@ public class SpellFilter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            // if mp and affinity is sufficient
-            if (true) {
-                // activate
-                activeSpells[0].Activate(gameObject);
-            } else {
-                // alert not enough mp/stability
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            // if mp and affinity is sufficient
-            if (true) {
-                // activate
-                activeSpells[1].Activate(gameObject);
-            } else {
-                // alert not enough mp/stability
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            // if mp and affinity is sufficient
-            if (true) {
-                // activate
-                activeSpells[2].Activate(gameObject);
-            } else {
-                // alert not enough mp/stability
-            }
-        } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            // if mp and affinity is sufficient
-            if (true) {
-                // activate
-                activeSpells[3].Activate(gameObject);
-            } else {
-                // alert not enough mp/stability
+        for (int x = 0; x < keyCodes.Length; x++) {
+            if (Input.GetKeyDown(keyCodes[x])) {
+                if (playerStats.affinityIsStable() && playerStats.GetCurrMP() >= allSpells[x].MpCost) {
+                    allSpells[x].Activate(gameObject);
+                    playerStats.UpdateCurrAffinity(allSpells[x].AffinityCost);
+                    playerStats.UpdateCurrMP(allSpells[x].MpCost);
+                } else {
+                    Debug.Log("Out of MP/unstable affinity");
+                }
             }
         }
     }

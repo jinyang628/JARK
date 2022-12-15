@@ -7,7 +7,7 @@ public class Spell : ScriptableObject {
     public string Desc {get; set;}
 
     public int MpCost {get; set;}
-    public (float, float) AffinityCost {get; set;} // x, y values of offset
+    public (float x, float y) AffinityCost {get; set;} // x, y values of offset
     public Spell() {
         
     }
