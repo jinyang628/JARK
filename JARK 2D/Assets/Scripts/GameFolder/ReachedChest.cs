@@ -8,6 +8,7 @@ public class ReachedChest : MonoBehaviour
     private string sceneName;
     private string nextSceneName;
     private int nextSceneNumber;
+    public AudioSource reachedChestSound;
 
     void Start(){
         sceneName = SceneManager.GetActiveScene().name; 
@@ -19,6 +20,7 @@ public class ReachedChest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.name == "Player"){
+            reachedChestSound.Play();
             SceneManager.LoadScene(nextSceneName);
             PlayerPrefs.SetInt("LevelPassed", nextSceneNumber - 1);
         }
