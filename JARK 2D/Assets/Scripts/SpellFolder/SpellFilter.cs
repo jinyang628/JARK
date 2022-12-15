@@ -37,7 +37,7 @@ public class SpellFilter : MonoBehaviour
             // if mp and affinity is sufficient
             if (true) {
                 // activate
-                activeSpells[2].Activate(gameObject);
+                activeSpells[1].Activate(gameObject);
             } else {
                 // alert not enough mp/stability
             }

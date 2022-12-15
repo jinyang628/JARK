@@ -197,11 +197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c53fb5b1dacc848b83a87197d2b86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validSpells: 01010100
+  validSpells: 01010101
   allSpells:
+  - {fileID: 11400000, guid: 8c69b888691c1ed48bf34b56c34a3b2f, type: 2}
   - {fileID: 11400000, guid: 96b4c9c54cbfbdb49839379f3b8111f7, type: 2}
-  - {fileID: 11400000, guid: ffc037cc2c1ff2946951c206f8f7c6f3, type: 2}
-  - {fileID: 11400000, guid: ffc037cc2c1ff2946951c206f8f7c6f3, type: 2}
+  - {fileID: 11400000, guid: 63967871494a9e54f88d85846de08554, type: 2}
+  - {fileID: 11400000, guid: 34abdff023c20c44f927dd44d77ee7a3, type: 2}
 --- !u!1001 &728733486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923839454177804280, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
