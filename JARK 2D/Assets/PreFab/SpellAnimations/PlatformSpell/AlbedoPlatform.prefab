@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6079954278748795890}
   m_Layer: 6
   m_Name: AlbedoPlatform
-  m_TagString: Untagged
+  m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
