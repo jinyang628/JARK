@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a471a25fe3d59c84381c646e93b6a6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 4
   jumpingPower: 6
   player: {fileID: 1493690182499108550}
   groundCheck: {fileID: 3883168818563183571}
