@@ -95,18 +95,24 @@ public class AWScript : MonoBehaviour
 
         }
     }
-    
-    // Dummy spell
-    public void SPELL1()
+    /*
+    // Update pointer position according to PlayerStats
+    private void UpdateWheel()
     {
-        MovePointer((-2, 1));
-    }
+        Vector3 currPosition = Heart.transform.position;
+        Vector3 newPosition = new Vector3(PlayerStats.currAffinity.x * 0.3f, PlayerStats.currAffinity.y * 0.3f, 0);
+        if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
+        {
+            Heart.transform.position = newPosition;
+        }
+        else
+        {
+            Vector3 correction = (newPosition - Background.transform.position).normalized;
+            Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Collider2D>().bounds.size.x / 2;
 
-    public void SPELL2()
-    {
-        MovePointer((3, -1));
+        }
     }
-
+    */
     void Start()
     {
         ResetHeart();
