@@ -7,7 +7,7 @@ public class PlatformCreationSpell : Spell
 {
     public GameObject platformPreFab;
     private AudioSource sound;
-    private string directory = "PlatformSpellSound";
+    private string directory = "SpellSounds/PlatformSpellSound";
     void Awake()
     {
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
