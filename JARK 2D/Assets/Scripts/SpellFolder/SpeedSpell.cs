@@ -13,8 +13,6 @@ public class SpeedSpell : Spell
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
         Name = "RUBEDO";
         Desc = "Time spell. Speeds up the caster's personal time.";
-        MpCost = 1;
-        AffinityCost = (1, 1); 
     }
 
     public override void Activate(GameObject parent)

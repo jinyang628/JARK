@@ -21,6 +21,9 @@ public class SpellFilter : MonoBehaviour
     void Awake()
     {
         playerStats = gameObject.GetComponent<PlayerStats>();
+        foreach (Spell s in allSpells) {
+            s.AffinityCost = (s.x, s.y);
+        }
     }
 
     void Update()
@@ -28,8 +31,10 @@ public class SpellFilter : MonoBehaviour
         for (int x = 0; x < keyCodes.Length; x++) {
             if (Input.GetKeyDown(keyCodes[x])) {
                 if (playerStats.affinityIsStable() && playerStats.GetCurrMP() >= allSpells[x].MpCost) {
+                    Debug.Log("ON, MP - " + playerStats.GetCurrMP() + " COST - " + allSpells[x].MpCost);
                     allSpells[x].Activate(gameObject);
                     playerStats.UpdateCurrAffinity(allSpells[x].AffinityCost);
+                    Debug.Log(playerStats.GetCurrAffinity());
                     playerStats.UpdateCurrMP(allSpells[x].MpCost);
                 } else {
                     Debug.Log("Out of MP/unstable affinity");
