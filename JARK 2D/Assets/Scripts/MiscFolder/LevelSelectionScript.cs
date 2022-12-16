@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class LevelSelectionScript : MonoBehaviour
 {
-    public Button Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8;
+    public Button Button0, Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Button10, Button11, Button12, Button13, Button14;
     int levelPassed;
 
     void Start(){
@@ -71,7 +71,72 @@ public class LevelSelectionScript : MonoBehaviour
                 Button6.interactable = true;
                 Button7.interactable = true;
                 Button8.interactable = true;
-                //Button9.interactable = true;
+                Button9.interactable = true;
+                break;
+            case 9:
+                Button2.interactable = true;
+                Button3.interactable = true;
+                Button4.interactable = true;
+                Button5.interactable = true;
+                Button6.interactable = true;
+                Button7.interactable = true;
+                Button8.interactable = true;
+                Button9.interactable = true;
+                Button10.interactable = true;
+                break;
+            case 10:
+                Button2.interactable = true;
+                Button3.interactable = true;
+                Button4.interactable = true;
+                Button5.interactable = true;
+                Button6.interactable = true;
+                Button7.interactable = true;
+                Button8.interactable = true;
+                Button9.interactable = true;
+                Button10.interactable = true;
+                Button11.interactable = true;
+                break;
+            case 11:
+                Button2.interactable = true;
+                Button3.interactable = true;
+                Button4.interactable = true;
+                Button5.interactable = true;
+                Button6.interactable = true;
+                Button7.interactable = true;
+                Button8.interactable = true;
+                Button9.interactable = true;
+                Button10.interactable = true;
+                Button11.interactable = true;
+                Button12.interactable = true;
+                break;
+            case 12:
+                Button2.interactable = true;
+                Button3.interactable = true;
+                Button4.interactable = true;
+                Button5.interactable = true;
+                Button6.interactable = true;
+                Button7.interactable = true;
+                Button8.interactable = true;
+                Button9.interactable = true;
+                Button10.interactable = true;
+                Button11.interactable = true;
+                Button12.interactable = true;
+                Button13.interactable = true;
+                break;
+            case 13:
+                Button2.interactable = true;
+                Button3.interactable = true;
+                Button4.interactable = true;
+                Button5.interactable = true;
+                Button6.interactable = true;
+                Button7.interactable = true;
+                Button8.interactable = true;
+                Button9.interactable = true;
+                Button10.interactable = true;
+                Button11.interactable = true;
+                Button12.interactable = true;
+                Button13.interactable = true;
+                Button14.interactable = true;
                 break;
         }
     }
