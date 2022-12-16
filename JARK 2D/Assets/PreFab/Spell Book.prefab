@@ -184,6 +184,7 @@ MonoBehaviour:
   leftPage: {fileID: 2762453664844435157}
   player: {fileID: 0}
   btn: {fileID: 0}
+  canvasExists: 0
 --- !u!1 &2762453664842240309
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2762453664842240310
 RectTransform:
   m_ObjectHideFlags: 0
