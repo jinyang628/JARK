@@ -13,7 +13,7 @@ public class AWScript : MonoBehaviour
     // Resets heart to centre of wheel
     void Start()
     {
-        player = GameObject.Find("/Player").GetComponent<PlayerStats>();
+        player = GameObject.Find("Player").GetComponent<PlayerStats>();
         ResetHeart();
     }
     public void ResetHeart()
@@ -43,9 +43,7 @@ public class AWScript : MonoBehaviour
     {
         float x = Heart.transform.position.x - Background.transform.position.x;
         float y = Heart.transform.position.y - Background.transform.position.y;
-        float displacement = (Heart.transform.position - Background.transform.position).magnitude;
-
-
+        
         if (x < 0 && y >= 0)
         {
             CurrentQuadrant = 1;

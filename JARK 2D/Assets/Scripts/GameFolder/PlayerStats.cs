@@ -41,9 +41,17 @@ public class PlayerStats : MonoBehaviour
         currAffinity.y += c.y;
     }
 
-    public bool affinityIsStable() =>
-        //return Mathf.Sqrt(currAffinity.x * currAffinity.x + currAffinity.y * currAffinity.y) < stabilityThreshold;
-        wheel.Stability;
+    public bool affinityIsStable()
+    {
+        if (wheel == null) {
+            return true;
+        } else {
+            return wheel.Stability;
+        }
+    }
+
+    //return Mathf.Sqrt(currAffinity.x * currAffinity.x + currAffinity.y * currAffinity.y) < stabilityThreshold;
+
     // Start is called before the first frame update
     void Start()
     {
