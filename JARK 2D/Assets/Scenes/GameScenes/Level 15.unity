@@ -1354,6 +1354,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571c30bb9e79932449ef0bd5b9bfeacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &618536507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6930122694965717508, guid: 11fe013734e060a47985f234cca6ae71, type: 3}
+  m_PrefabInstance: {fileID: 677669857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &618536513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618536507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a475d2803ff86ce4bb33504d553a97eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reachedChestSound: {fileID: 1096568092}
 --- !u!20 &644002020 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1749392781038512630, guid: d3cfc634e9db79b4d92a08f6469f00ea, type: 3}
@@ -1366,6 +1384,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3047802639749591213, guid: 11fe013734e060a47985f234cca6ae71, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2597719085511350311, guid: 11fe013734e060a47985f234cca6ae71, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2290,6 +2312,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+--- !u!82 &1096568092 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3065515080323510147, guid: 11fe013734e060a47985f234cca6ae71, type: 3}
+  m_PrefabInstance: {fileID: 677669857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219926371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2489,7 @@ GameObject:
   - component: {fileID: 1388379865}
   m_Layer: 6
   m_Name: DirtGround
-  m_TagString: Destructible
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
