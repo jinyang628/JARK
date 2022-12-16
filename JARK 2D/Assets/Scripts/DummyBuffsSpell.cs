@@ -7,8 +7,8 @@ public class DummyBuffsSpell : MonoBehaviour
     public GameObject invisibleFollowerPreFab;
     private GameObject playerObj = null;
     public bool validSpellCast = true;
-    public AudioSource jumpSpellSound;
-    public AudioSource speedSpellSound;
+    //public AudioSource jumpSpellSound;
+    //public AudioSource speedSpellSound;
     public Animator buffSpellsAnimator;
 
     void Start()
@@ -26,19 +26,19 @@ public class DummyBuffsSpell : MonoBehaviour
 
         if (validSpellCast)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                //for input of number 3 on alphanumeric keyboard
-                Debug.Log("Key 3:jump buff spell is cast!");
-                jumpSpellSound.Play();
+                //for input of number 2 on alphanumeric keyboard
+                //Debug.Log("Key 2:jump buff spell is cast!");
+                //jumpSpellSound.Play();
                 buffSpellsAnimator.SetTrigger("castJumpSpell");
             }
             
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                //for input of number 4 on alphanumeric keyboard
-                Debug.Log("Key 4:speed buff spell is cast!");
-                speedSpellSound.Play();
+                //for input of number 3 on alphanumeric keyboard
+                //Debug.Log("Key 3:speed buff spell is cast!");
+                //speedSpellSound.Play();
                 buffSpellsAnimator.SetTrigger("castSpeedSpell");
             }
         }
