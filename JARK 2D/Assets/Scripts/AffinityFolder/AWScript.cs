@@ -8,11 +8,14 @@ public class AWScript : MonoBehaviour
     public GameObject Background;
     public GameObject StabilityZone;
     public int CurrentQuadrant;
-    public bool IsStable;
-    private bool WithinWheel;
+    private PlayerStats player;
 
- 
     // Resets heart to centre of wheel
+    void Start()
+    {
+        player = GameObject.Find("/Player").GetComponent<PlayerStats>();
+        ResetHeart();
+    }
     public void ResetHeart()
     {
         Heart.transform.position = Background.transform.position;
@@ -35,7 +38,7 @@ public class AWScript : MonoBehaviour
         }
             
     }
-   
+
     public void PointerUpdate()
     {
         float x = Heart.transform.position.x - Background.transform.position.x;
@@ -59,48 +62,14 @@ public class AWScript : MonoBehaviour
         {
             CurrentQuadrant = 4;
         }
-
-        
-        if (displacement <= StabilityZone.GetComponent<Collider2D>().bounds.size.x / 2)
-        {
-            IsStable = true;
-        } else
-        {
-            IsStable = false;
-        }
-        
-
-        if (displacement <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
-        {
-            WithinWheel = true;
-        } else
-        {
-            WithinWheel = false;
-        }
-        
     }
-       
-    // MovePointer translates pointer according to supplied tuple
-    public void MovePointer((float, float) t1)
-    {
-        Vector3 currPosition = Heart.transform.position;
-        Vector3 newPosition = currPosition + new Vector3(t1.Item1 * 0.3f, t1.Item2 * 0.3f, 0);
-        if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
-        {
-            Heart.transform.position = newPosition;
-        } else
-        {
-            Vector3 correction = (newPosition - Background.transform.position).normalized;
-            Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Collider2D>().bounds.size.x / 2;
+    public bool Stability => (Heart.transform.position - Background.transform.position).magnitude <= StabilityZone.GetComponent<Collider2D>().bounds.size.x / 2;
 
-        }
-    }
-    /*
     // Update pointer position according to PlayerStats
     private void UpdateWheel()
     {
-        Vector3 currPosition = Heart.transform.position;
-        Vector3 newPosition = new Vector3(PlayerStats.currAffinity.x * 0.3f, PlayerStats.currAffinity.y * 0.3f, 0);
+        Vector3 currPosition = Background.transform.position;
+        Vector3 newPosition = currPosition + new Vector3(player.GetCurrAffinity().x * 0.5f, player.GetCurrAffinity().y * 0.5f, 0);
         if ((newPosition - Background.transform.position).magnitude <= Background.GetComponent<Collider2D>().bounds.size.x / 2)
         {
             Heart.transform.position = newPosition;
@@ -109,22 +78,13 @@ public class AWScript : MonoBehaviour
         {
             Vector3 correction = (newPosition - Background.transform.position).normalized;
             Heart.transform.position = Background.transform.position + correction * Background.GetComponent<Collider2D>().bounds.size.x / 2;
-
         }
     }
-    */
-    void Start()
-    {
-        ResetHeart();
-    }
-
+    
 
     void Update()
-    {
-        
-        PointerUpdate();
-        Debug.Log("Quadrant: " + CurrentQuadrant + ", Stability: " + IsStable + ", Within: " + WithinWheel);
-        
+    { 
+        UpdateWheel();
     }
 
 
