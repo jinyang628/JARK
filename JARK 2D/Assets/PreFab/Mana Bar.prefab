@@ -396,6 +396,12 @@ MonoBehaviour:
   square3: {fileID: 523278997904987818}
   square4: {fileID: 13978762850245660}
   square5: {fileID: 530076653916412343}
+  squares:
+  - {fileID: 5740857529461193397}
+  - {fileID: 4089635971443895599}
+  - {fileID: 523278997904987818}
+  - {fileID: 13978762850245660}
+  - {fileID: 530076653916412343}
 --- !u!1 &5740857529461193397
 GameObject:
   m_ObjectHideFlags: 0

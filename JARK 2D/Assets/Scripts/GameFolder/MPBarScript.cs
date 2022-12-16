@@ -11,31 +11,22 @@ public class MPBarScript : MonoBehaviour
     public GameObject square3;
     public GameObject square4;
     public GameObject square5;
+    public GameObject[] squares;
+    void Awake() {
 
+    }
     void Start()
     {
         player = GameObject.Find("/Player").GetComponent<PlayerStats>();
     }
 
     void Update() {
-        switch (player.GetCurrMP()) {
-            case 5:
-                break;
-            case 4:
-                square5.SetActive(false);
-                break;
-            case 3:
-                square4.SetActive(false);
-                break;
-            case 2:
-                square3.SetActive(false);
-                break;
-            case 1:
-                square2.SetActive(false);
-                break;
-            case 0:
-                square1.SetActive(false);
-                break;
+        int x;
+        for (x = 0; x < player.GetCurrMP(); x++) {
+            squares[x].SetActive(true);
+        }
+        for (;x < 5; x++) {
+            squares[x].SetActive(false);
         }
     }
 }
