@@ -6,6 +6,7 @@ public class DummyBuffsSpell : MonoBehaviour
 {
     public GameObject invisibleFollowerPreFab;
     private GameObject playerObj = null;
+    private PlayerStats playerStats;
     public bool validSpellCast = true;
     public Animator buffSpellsAnimator;
 
@@ -15,6 +16,7 @@ public class DummyBuffsSpell : MonoBehaviour
         {
             playerObj = GameObject.Find("Player");
         }
+        playerStats = playerObj.GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -22,7 +24,7 @@ public class DummyBuffsSpell : MonoBehaviour
         //constantly update invisibleFollower's position to be same as Player's position
         invisibleFollowerPreFab.transform.position = new Vector3(playerObj.transform.position.x, playerObj.transform.position.y, 0f);
 
-        if (validSpellCast)
+        if (playerStats.affinityIsStable() && playerStats.GetCurrMP() > 0)
         {
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
