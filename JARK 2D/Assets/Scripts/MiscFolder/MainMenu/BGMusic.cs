@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BGMusic : MonoBehaviour
 {
@@ -29,5 +30,6 @@ public class BGMusic : MonoBehaviour
             GetComponent<AudioSource>().clip = songs[currentSong];
             GetComponent<AudioSource>().Play();
         }
+
     }
 }

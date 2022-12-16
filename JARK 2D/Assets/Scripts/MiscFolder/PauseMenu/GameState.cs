@@ -31,20 +31,20 @@ public class GameState : MonoBehaviour
 
     void Update(){
         //Debug.Log(player_x_coord);
-        currentLevel = SceneManager.GetActiveScene().name;
-        if (currentLevel != "PauseMenu"){
-            player = GameObject.Find("Player");
-            if (game_paused == true){
-                //i have no idea why the player gameobject drops its y-coord whenever i pause the game. The + 2.5 is a artificial patchup
-                player.transform.position = new Vector3(player_x_coord, player_y_coord + (float)2.5, 0);
-                //game_paused = false;
-            }
-            else{
-                player_x_coord = player.transform.position.x;
-                player_y_coord = player.transform.position.x;
-                player_z_coord = player.transform.position.x;
-            }
-        }
+        // currentLevel = SceneManager.GetActiveScene().name;
+        // if (currentLevel != "PauseMenu"){
+        //     player = GameObject.Find("Player");
+        //     if (game_paused == true){
+        //         //i have no idea why the player gameobject drops its y-coord whenever i pause the game. The + 2.5 is a artificial patchup
+        //         player.transform.position = new Vector3(player_x_coord, player_y_coord + (float)2.5, 0);
+        //         //game_paused = false;
+        //     }
+        //     else{
+        //         player_x_coord = player.transform.position.x;
+        //         player_y_coord = player.transform.position.x;
+        //         player_z_coord = player.transform.position.x;
+        //     }
+        // }
 
         
     }
