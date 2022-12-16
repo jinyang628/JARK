@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         horizontal = Input.GetAxisRaw("Horizontal");
         if (horizontal == 0)
         {

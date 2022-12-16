@@ -34,7 +34,7 @@ public class SpellFilter : MonoBehaviour
             gameObject.tag = "Untagged";
         }
         for (int x = 0; x < keyCodes.Length; x++) {
-            if (Input.GetKeyDown(keyCodes[x])) {
+            if (Input.GetKeyDown(keyCodes[x]) && validSpells[x]) {
                 if (playerStats.affinityIsStable() && playerStats.GetCurrMP() >= allSpells[x].MpCost && (x == 3 ? allSpells[x].cooldown == 0 : true)) {
                     Debug.Log("ON, MP - " + playerStats.GetCurrMP() + " COST - " + allSpells[x].MpCost);
                     allSpells[x].Activate(gameObject);
