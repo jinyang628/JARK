@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     public float startY = 0f;
     private (float x, float y) currAffinity;
     public float stabilityThreshold = 5f;
+    private AWScript wheel;
 
     public int GetCurrMP() {
         return currMP;
@@ -33,19 +34,20 @@ public class PlayerStats : MonoBehaviour
         // Set current MP to v
         currAffinity = v;
     }
-
+     
     public void UpdateCurrAffinity((float x, float y) c) {
         // Update current MP, by ADDING c
         currAffinity.x += c.x;
         currAffinity.y += c.y;
     }
 
-    public bool affinityIsStable() {
-        return Mathf.Sqrt(currAffinity.x * currAffinity.x + currAffinity.y * currAffinity.y) < stabilityThreshold;
-    }
+    public bool affinityIsStable() =>
+        //return Mathf.Sqrt(currAffinity.x * currAffinity.x + currAffinity.y * currAffinity.y) < stabilityThreshold;
+        wheel.Stability;
     // Start is called before the first frame update
     void Start()
     {
+        wheel = GameObject.Find("Affinity_Wheel").GetComponent<AWScript>();
         SetCurrMP(startMP);
         SetCurrAffinity((startX, startY));
     }
