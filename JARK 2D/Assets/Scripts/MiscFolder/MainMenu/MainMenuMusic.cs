@@ -12,7 +12,8 @@ public class MainMenuMusic : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name.Substring(0, 6) == "Level "){
+        string name_ = SceneManager.GetActiveScene().name.Substring(0, 6);
+        if (name_ == "Level " || name_ == "IntroS"){
             Destroy(this.gameObject);
         }
         if (SceneManager.GetActiveScene().name == "StartMenu"){
