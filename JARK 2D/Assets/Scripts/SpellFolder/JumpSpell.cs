@@ -13,8 +13,6 @@ public class JumpSpell : Spell
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
         Name = "CITRINITAS";
         Desc = "Gravity spell. Reduces the gravity on the caster.";
-        MpCost = 1;
-        AffinityCost = (1, 1); 
     }
 
     public override void Activate(GameObject parent)

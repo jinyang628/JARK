@@ -592,7 +592,6 @@ GameObject:
   - component: {fileID: -1593178411509898218}
   - component: {fileID: -7915854455237550844}
   - component: {fileID: 1298830171769138527}
-  - component: {fileID: 8923839454177804280}
   - component: {fileID: 1394902198793113970}
   - component: {fileID: 136754370928385241}
   m_Layer: 0
@@ -720,8 +719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a471a25fe3d59c84381c646e93b6a6af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpingPower: 6
+  speed: 4
+  jumpingPower: 7
   player: {fileID: 1493690182795542223}
   groundCheck: {fileID: 3883168817786506202}
   groundLayer:
@@ -747,20 +746,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8923839454177804280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643899414498766788}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72105f1fa01602449ceabfac3560060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platformPreFab: {fileID: 3599912248740003289, guid: 7bc749dcc456d08428f0edd143391b9d, type: 3}
-  platformCastSound: {fileID: 5034678462076115002}
 --- !u!114 &1394902198793113970
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class PlayerStats : MonoBehaviour
 {
     public int startMP = 5;
     private int currMP;
-    public (float x, float y) startAffinity = (0f, 0f);
+    public float startX = 0f;
+    public float startY = 0f;
     private (float x, float y) currAffinity;
     public float stabilityThreshold = 5f;
 
@@ -46,6 +47,6 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         SetCurrMP(startMP);
-        SetCurrAffinity(startAffinity);
+        SetCurrAffinity((startX, startY));
     }
 }

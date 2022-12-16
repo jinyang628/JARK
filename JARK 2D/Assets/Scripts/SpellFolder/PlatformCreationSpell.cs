@@ -13,8 +13,6 @@ public class PlatformCreationSpell : Spell
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
         Name = "ALBEDO";
         Desc = "Creation spell. Creates a layer of dust underneath the caster.";
-        MpCost = 1;
-        AffinityCost = (1, 1); 
     }
 
     public override void Activate(GameObject parent)
