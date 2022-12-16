@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5667321137979817680}
   - component: {fileID: 2313890843437754353}
-  - component: {fileID: 3510886012329594337}
-  - component: {fileID: 4152685737240611341}
+  - component: {fileID: 2140765655661072950}
+  - component: {fileID: 6642170475797663745}
   m_Layer: 0
   m_Name: MP Potion
   m_TagString: Untagged
@@ -86,27 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3510886012329594337
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7919961033426601534}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b94b5afe8d321a419ebe47d64ec8bf6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4152685737240611341
+--- !u!114 &2140765655661072950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,3 +99,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionObj: {fileID: 7919961033426601534}
+  player: {fileID: 7643899414498766788, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+--- !u!60 &6642170475797663745
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919961033426601534}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.039596483, y: 0.25}
+      - {x: -0.11377308, y: 0.09375}
+      - {x: -0.17994042, y: -0.03269446}
+      - {x: -0.13194159, y: -0.18035044}
+      - {x: -0.06901282, y: -0.2285929}
+      - {x: 0.01110217, y: -0.25321794}
+      - {x: 0.14491065, y: -0.19745532}
+      - {x: 0.20264013, y: 0.0019359663}
+      - {x: 0.15658724, y: 0.0625}
+      - {x: 0.045097526, y: 0.25}
