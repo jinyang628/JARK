@@ -1742,6 +1742,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 136754370928385241, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+      propertyPath: stabilityThreshold
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394902198793113970, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+      propertyPath: validSpells.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394902198793113970, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+      propertyPath: validSpells.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6663917178071971870, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
       propertyPath: m_RootOrder
       value: 3
