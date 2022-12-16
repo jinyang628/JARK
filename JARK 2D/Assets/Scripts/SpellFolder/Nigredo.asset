@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: NIGREDO
   Desc: Destruction spell. Temporarily bestows the caster with great strength to
     destroy.
-  activeTime: 1
+  activeTime: 5
   cooldown: 0
   MpCost: 1
   x: -1
