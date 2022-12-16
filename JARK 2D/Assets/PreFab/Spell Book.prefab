@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 2762453664842240310}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 119, y: 37}
-  m_SizeDelta: {x: 201.7734, y: 234.4276}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 420, y: 60}
+  m_SizeDelta: {x: 200, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2762453664046494110
 CanvasRenderer:
@@ -79,7 +79,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: if you see this
+  m_Text: 'test
+
+'
 --- !u!1 &2762453664741651835
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +131,7 @@ MonoBehaviour:
   leftPage: {fileID: 2762453664844435157}
   rightPage: {fileID: 2762453664046494111}
   player: {fileID: 0}
+  btn: {fileID: 0}
 --- !u!1 &2762453664842240309
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4bbf709f88492c4493461d644bd4841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2cda247a28f94244c80a99896f3c5a7f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -240,10 +243,10 @@ RectTransform:
   m_Father: {fileID: 2762453664842240310}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 185.96194, y: -231.42497}
-  m_SizeDelta: {x: 200.2973, y: 212.8499}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 180, y: 60}
+  m_SizeDelta: {x: 200, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2762453664844435156
 CanvasRenderer:

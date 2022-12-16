@@ -8,11 +8,11 @@ public class PlatformCreationSpell : Spell
     public GameObject platformPreFab;
     private AudioSource sound;
     private string directory = "SpellSounds/PlatformSpellSound";
-    void Awake()
+
+    public override void Awake()
     {
+        base.Awake();
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
-        Name = "ALBEDO";
-        Desc = "Creation spell. Creates a layer of dust underneath the caster.";
     }
 
     public override void Activate(GameObject parent)

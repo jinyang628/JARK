@@ -7,11 +7,11 @@ public class DestructionSpell : Spell
 {
     private AudioSource sound;
     private string directory = "SpellSounds/DestroySpellSound";
-    void Awake()
+
+    public override void Awake()
     {
+        base.Awake();
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
-        Name = "NIGREDO";
-        Desc = "Destruction spell. Destroys an object near the caster.";
     }
 
     public override void Activate(GameObject parent)

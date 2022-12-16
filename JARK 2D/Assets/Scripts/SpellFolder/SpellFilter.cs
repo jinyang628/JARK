@@ -22,7 +22,7 @@ public class SpellFilter : MonoBehaviour
     {
         playerStats = gameObject.GetComponent<PlayerStats>();
         foreach (Spell s in allSpells) {
-            s.AffinityCost = (s.x, s.y);
+            s.Awake();
         }
         allSpells[3].cooldown = 0;
     }
@@ -31,7 +31,7 @@ public class SpellFilter : MonoBehaviour
     {
         allSpells[3].cooldown = Mathf.Max(0, allSpells[3].cooldown - Time.deltaTime);
         if (allSpells[3].cooldown <= 0) {
-            gameObject.tag = null;
+            gameObject.tag = "Untagged";
         }
         for (int x = 0; x < keyCodes.Length; x++) {
             if (Input.GetKeyDown(keyCodes[x])) {

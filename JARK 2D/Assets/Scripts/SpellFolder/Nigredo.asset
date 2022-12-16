@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc9567233f2ba46931f420408b2a96, type: 3}
   m_Name: Nigredo
   m_EditorClassIdentifier: 
+  Name: NIGREDO
+  Desc: Destruction spell. Temporarily bestows the caster with great strength to
+    destroy.
+  activeTime: 1
+  cooldown: 0
   MpCost: 1
   x: -1
   y: 0
-  destructionDist: 5

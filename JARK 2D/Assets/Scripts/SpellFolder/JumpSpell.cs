@@ -8,11 +8,10 @@ public class JumpSpell : Spell
     public float change = 1f;
     private AudioSource sound;
     private string directory = "SpellSounds/JumpBuffSpellSound";
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
-        Name = "CITRINITAS";
-        Desc = "Gravity spell. Reduces the gravity on the caster.";
     }
 
     public override void Activate(GameObject parent)

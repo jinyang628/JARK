@@ -11,8 +11,14 @@ public class SpellBook : MonoBehaviour
     public Text rightPage;
     public GameObject player;
     private (Spell[] spells, bool[] active) spellList;
+    public Button btn = null;
+
     void Awake()
     {
+        if (!btn) {
+            btn = GameObject.Find("/UI/Spellbook").GetComponent<Button>();
+        }
+        btn.onClick.AddListener(flip);
         player = GameObject.Find("/Player");
         spellList = player.GetComponent<SpellFilter>().GetSpells();
         opened = false;
@@ -28,12 +34,16 @@ public class SpellBook : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            opened = !opened;
-            if (opened)
-                Open();
-            else
-                Close();
+            flip();
         }
+    }
+
+    void flip() {
+        opened = !opened;
+        if (opened)
+            Open();
+        else
+            Close();
     }
 
     void Open()
