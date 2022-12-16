@@ -8,11 +8,10 @@ public class SpeedSpell : Spell
     public float change = 1f;
     private AudioSource sound;
     private string directory = "SpellSounds/SpeedBuffSpellSound";
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
-        Name = "RUBEDO";
-        Desc = "Time spell. Speeds up the caster's personal time.";
     }
 
     public override void Activate(GameObject parent)
