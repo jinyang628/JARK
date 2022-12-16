@@ -8,7 +8,6 @@ public class SpellBook : MonoBehaviour
     private bool opened;
     public GameObject spellBook;
     public Text leftPage;
-    public Text rightPage;
     public GameObject player;
     private (Spell[] spells, bool[] active) spellList;
     public Button btn = null;
