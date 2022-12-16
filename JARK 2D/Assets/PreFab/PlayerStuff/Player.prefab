@@ -777,4 +777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMP: 5
+  startX: 0
+  startY: 0
   stabilityThreshold: 5

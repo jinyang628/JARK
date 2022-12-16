@@ -5,7 +5,8 @@ using UnityEngine;
 public class Spell : ScriptableObject {
     public string Name {get; set;}
     public string Desc {get; set;}
-
+    public float activeTime = 1f;
+    public float cooldown;
     public int MpCost;
     public float x;
     public float y;

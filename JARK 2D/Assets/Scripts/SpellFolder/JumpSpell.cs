@@ -7,7 +7,7 @@ public class JumpSpell : Spell
 {
     public float change = 1f;
     private AudioSource sound;
-    private string directory = "JumpBuffSpellSound";
+    private string directory = "SpellSounds/JumpBuffSpellSound";
     void Awake()
     {
         sound = GameObject.Find(directory).GetComponent<AudioSource>();

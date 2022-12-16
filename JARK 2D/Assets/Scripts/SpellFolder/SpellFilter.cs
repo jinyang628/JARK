@@ -24,13 +24,18 @@ public class SpellFilter : MonoBehaviour
         foreach (Spell s in allSpells) {
             s.AffinityCost = (s.x, s.y);
         }
+        allSpells[3].cooldown = 0;
     }
 
     void Update()
     {
+        allSpells[3].cooldown = Mathf.Max(0, allSpells[3].cooldown - Time.deltaTime);
+        if (allSpells[3].cooldown <= 0) {
+            gameObject.tag = null;
+        }
         for (int x = 0; x < keyCodes.Length; x++) {
             if (Input.GetKeyDown(keyCodes[x])) {
-                if (playerStats.affinityIsStable() && playerStats.GetCurrMP() >= allSpells[x].MpCost) {
+                if (playerStats.affinityIsStable() && playerStats.GetCurrMP() >= allSpells[x].MpCost && (x == 3 ? allSpells[x].cooldown == 0 : true)) {
                     Debug.Log("ON, MP - " + playerStats.GetCurrMP() + " COST - " + allSpells[x].MpCost);
                     allSpells[x].Activate(gameObject);
                     playerStats.UpdateCurrAffinity(allSpells[x].AffinityCost);

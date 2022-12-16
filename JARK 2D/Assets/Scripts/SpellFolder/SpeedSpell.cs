@@ -7,7 +7,7 @@ public class SpeedSpell : Spell
 {
     public float change = 1f;
     private AudioSource sound;
-    private string directory = "SpeedBuffSpellSound";
+    private string directory = "SpellSounds/SpeedBuffSpellSound";
     void Awake()
     {
         sound = GameObject.Find(directory).GetComponent<AudioSource>();
