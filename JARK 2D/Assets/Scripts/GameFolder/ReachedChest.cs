@@ -10,13 +10,13 @@ public class ReachedChest : MonoBehaviour
     private int nextSceneNumber;
     public AudioSource reachedChestSound;
 
-    void Start(){
-        sceneName = SceneManager.GetActiveScene().name; 
-        nextSceneNumber = (sceneName[sceneName.Length - 1] + 1) - '0';
-        nextSceneName = "Level " + nextSceneNumber.ToString();
-        //ALL CORRECT
+    // void Start(){
+    //     sceneName = SceneManager.GetActiveScene().name; 
+    //     nextSceneNumber = (sceneName[sceneName.Length - 1] + 1) - '0';
+    //     nextSceneName = "Level " + nextSceneNumber.ToString();
+    //     //ALL CORRECT
         
-    }
+    // }
 
     private void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.name == "Player"){
@@ -28,6 +28,7 @@ public class ReachedChest : MonoBehaviour
 
     IEnumerator Wait(){
         yield return new WaitForSeconds((float)0.5);
-        SceneManager.LoadScene(nextSceneName);
+        int current = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadSceneAsync(current + 1);
     }
 }
