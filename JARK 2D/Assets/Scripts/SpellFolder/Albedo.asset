@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c6fc5a38d58ae4a82f62655b63ba70, type: 3}
   m_Name: Albedo
   m_EditorClassIdentifier: 
+  Name: ALBEDO
+  Desc: Creation spell. Creates a layer of dust below the caster
+  activeTime: 1
+  cooldown: 0
   MpCost: 1
   x: 1
   y: 0
