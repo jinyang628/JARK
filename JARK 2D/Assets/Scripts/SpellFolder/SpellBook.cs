@@ -12,6 +12,7 @@ public class SpellBook : MonoBehaviour
     public GameObject player;
     private (Spell[] spells, bool[] active) spellList;
     public Button btn = null;
+    [SerializeField] private bool canvasExists = false;
 
     void Awake()
     {
@@ -52,6 +53,11 @@ public class SpellBook : MonoBehaviour
         spellBook.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        if (GameObject.Find("Canvas") != null)
+        {
+            canvasExists = true;
+            GameObject.Find("Canvas").SetActive(false);
+        }
     }
 
     void Close()
@@ -60,5 +66,9 @@ public class SpellBook : MonoBehaviour
         spellBook.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (canvasExists)
+        {
+            GameObject.Find("Canvas").SetActive(true);
+        }
     }
 }
