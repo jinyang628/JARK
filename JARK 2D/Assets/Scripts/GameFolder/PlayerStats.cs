@@ -55,7 +55,6 @@ public class PlayerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         var AW = GameObject.Find("Affinity_Wheel");
         if (AW) {
             wheel = AW.GetComponent<AWScript>();

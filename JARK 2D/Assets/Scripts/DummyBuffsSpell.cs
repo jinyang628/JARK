@@ -7,6 +7,7 @@ public class DummyBuffsSpell : MonoBehaviour
     public GameObject invisibleFollowerPreFab;
     private GameObject playerObj = null;
     private PlayerStats playerStats;
+    private SpellFilter s;
     public bool validSpellCast = true;
     public Animator buffSpellsAnimator;
 
@@ -17,6 +18,7 @@ public class DummyBuffsSpell : MonoBehaviour
             playerObj = GameObject.Find("Player");
         }
         playerStats = playerObj.GetComponent<PlayerStats>();
+        s = playerObj.GetComponent<SpellFilter>();
     }
 
     void Update()
@@ -26,14 +28,14 @@ public class DummyBuffsSpell : MonoBehaviour
 
         if (playerStats.affinityIsStable() && playerStats.GetCurrMP() > 0)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) && s.validSpells[1])
             {
                 //for input of number 2 on alphanumeric keyboard
                 Debug.Log("Key 2:jump buff spell is cast!");
                 buffSpellsAnimator.SetTrigger("castJumpSpell");
             }
             
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3) && s.validSpells[2])
             {
                 //for input of number 3 on alphanumeric keyboard
                 Debug.Log("Key 3:speed buff spell is cast!");
