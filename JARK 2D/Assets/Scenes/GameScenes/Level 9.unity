@@ -1709,6 +1709,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 136754370928385241, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
+      propertyPath: startMP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136754370928385241, guid: 8c85e187e85de5940bd01bdbac0a5c25, type: 3}
       propertyPath: stabilityThreshold
       value: 500
       objectReference: {fileID: 0}
