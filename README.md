@@ -1,2 +1,2 @@
 # JARK
-GmaeCraft! 2022
+GameCraft! 2022
